@@ -1,5 +1,5 @@
-let app = new PIXI.Application({ width: 256, height: 256 });
-document.body.appendChild(app.view);
+// let app = new PIXI.Application({ width: 256, height: 256 });
+// document.body.appendChild(app.view);
 
 var stage = new PIXI.Container();
 var NUM_THEMES = 1;
@@ -43,3 +43,4 @@ function animate() {
     requestAnimationFrame(animate);
 }
 GOWN.loader.load();
+
