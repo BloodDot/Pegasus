@@ -38,7 +38,7 @@ function onCompleteMetal() {
     stage.addChild(a);
 }
 
-var theme = new GOWN.ThemeParser("../themes/aeon_desktop/aeon_desktop.json");
+var theme = new GOWN.ThemeParser("themes/aeon_desktop/aeon_desktop.json");
 theme.once(GOWN.Theme.COMPLETE, onCompleteMetal, this);
 
 function animate() {
