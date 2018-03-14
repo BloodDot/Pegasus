@@ -1254,7 +1254,7 @@ declare namespace GOWN {
          * @param [maxWidth=Infinity] The maximum width of the layout group {Number}
          * @param [maxHeight=Infinity] The maximum height of the layout group {Number}
          */
-        constructor(layout: GOWN.LayoutAlignment, maxWidth: Number, maxHeight: Number): void;
+        constructor(layout?: GOWN.LayoutAlignment, maxWidth?: Number, maxHeight?: Number): void;
 
         /**
          * The layout for the layout group
@@ -2758,7 +2758,7 @@ declare namespace GOWN {
          * @param jsonPath The path to the .json file {String}
          * @param [global=true] Set theme as the global GOWN.theme {bool}
          */
-        constructor(jsonPath: String, global: Boolean): void;
+        constructor(jsonPath: String, global?: Boolean = true): void;
 
         //TODO
         DATA_LOADED: String = 'data_loaded';
@@ -3513,4 +3513,6 @@ declare namespace GOWN {
          */
         updateTheme(data): void;
     }
+
+    export const loader = PIXI.loader;
 }
