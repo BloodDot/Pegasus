@@ -6,7 +6,6 @@ declare namespace GOWN {
      * basic shapes
      */
     namespace shapes {
-
         class Shape extends PIXI.Graphics {
             /**
              * Shape base class
@@ -20,7 +19,7 @@ declare namespace GOWN {
              * @param width Width of the shape {Number}
              * @param height Height of the shape {Number}
              */
-            constructor(color: Number, alpha: Number = 1.0, width: Number, height: Number): void;
+            constructor(color: number, alpha: number, width: number, height: number);
 
             /**
              * The alpha of the shape, setting this will redraw the component.
@@ -29,7 +28,7 @@ declare namespace GOWN {
              * @type Number
              * @default 1.0
              */
-            alpha: Number = 1;
+            alpha: number;
 
             /**
              * The fill color of the shape, setting this will redraw the component.
@@ -40,7 +39,7 @@ declare namespace GOWN {
              * @name GOWN.shapes.Shape#color
              * @type Number
              */
-            color: Number;
+            color: number;
 
             /**
              * Change the border color of shape
@@ -48,7 +47,7 @@ declare namespace GOWN {
              * @property borderColor
              * @type Number
              */
-            borderColor: Number;
+            borderColor: number;
 
             /**
              * Change the border alpha of shape (between 0.0 - 1.0)
@@ -57,7 +56,7 @@ declare namespace GOWN {
              * @type Number
              * @default 1.0
              */
-            borderAlpha: Number = 1.0;
+            borderAlpha: number;
 
             /**
              * Change the border size
@@ -65,7 +64,7 @@ declare namespace GOWN {
              * @property border
              * @type Number
              */
-            border: Number;
+            border: number;
         }
 
         class Arrow extends GOWN.shapes.Shape {
@@ -83,7 +82,7 @@ declare namespace GOWN {
              * @param width Width of the arrow {Number}
              * @param height Height of the arrow {Number}
              */
-            constructor(color: Number, alpha: Number = 1.0, tailWidth: Number, tailHeight: Number, width: Number, height: Number): void;
+            constructor(color: number, alpha: number, tailWidth: number, tailHeight: number, width: number, height: number);
         }
 
         class Diamond extends GOWN.shapes.Shape {
@@ -99,7 +98,7 @@ declare namespace GOWN {
             * @param width Width of the diamond shape {Number}
             * @param height Height of the diamond shape {Number}
             */
-            constructor(color: Number, alpha: Number, width: Number, height: Number): void;
+            constructor(color: number, alpha: number, width: number, height: number);
         }
 
         class Ellipse extends PIXI.Ellipse {
@@ -115,7 +114,7 @@ declare namespace GOWN {
              * @param width Width of the ellipse shape {Number}
              * @param height Height of the ellipse shape {Number}
              */
-            constructor(color: Number, alpha: Number, width: Number, height: Number): void;
+            constructor(color: number, alpha: number, width: number, height: number);
         }
 
         class Line implements PIXI.IShape {
@@ -133,7 +132,7 @@ declare namespace GOWN {
              * @param [lineWidth=1] Width of the line {Number}
              * @param reverse
              */
-            constructor(color: Number, alpha: Number, width: Number, height: Number, lineWidth: Number, reverse: Number): void;
+            constructor(color: number, alpha: number, width: number, height: number, lineWidth: number, reverse: number);
 
             /**
              * The width of the line
@@ -141,7 +140,7 @@ declare namespace GOWN {
              * @name GOWN.shapes.Line#lineWidth
              * @type Number
              */
-            lineWidth: Number = 1;
+            lineWidth: number;
         }
 
         class Rect implements PIXI.IShape {
@@ -158,21 +157,21 @@ declare namespace GOWN {
              * @param height Height of the rectangular shape {Number}
              * @param radius Radius of the rectangular shape {Number}
              */
-            constructor(color: Number, alpha: Number, width: Number, height: Number, radius: Number): void;
+            constructor(color: number, alpha: number, width: number, height: number, radius: number);
             /**
              * The radius of the rectangle border, setting this will redraw the component.
              *
              * @name GOWN.shapes.Rect#radius
              * @type Number
              */
-            radius: Number;
+            radius: number;
             /**
              * Reverses the line
              *
              * @name GOWN.shapes.Line#reverse
              * @type bool
              */
-            reverse: Boolean;
+            reverse: boolean;
         }
     }
 
@@ -185,7 +184,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * If the total item height is smaller than the height of the bounds,
@@ -195,7 +194,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly VERTICAL_ALIGN_TOP = 'top';
+            static readonly VERTICAL_ALIGN_TOP;
 
             /**
              * If the total item height is smaller than the height of the bounds,
@@ -205,7 +204,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly VERTICAL_ALIGN_MIDDLE = 'middle';
+            static readonly VERTICAL_ALIGN_MIDDLE;
 
             /**
              * Alignment justified
@@ -214,7 +213,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly ALIGN_JUSTIFY = 'justify';
+            static readonly ALIGN_JUSTIFY;
 
             /**
              * If the total item height is smaller than the height of the bounds,
@@ -224,7 +223,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly VERTICAL_ALIGN_BOTTOM = 'bottom';
+            static readonly VERTICAL_ALIGN_BOTTOM;
 
             /**
              * If the total item width is smaller than the width of the bounds, the
@@ -234,7 +233,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly HORIZONTAL_ALIGN_LEFT = 'left';
+            static readonly HORIZONTAL_ALIGN_LEFT;
 
             /**
              * If the total item width is smaller than the width of the bounds, the
@@ -244,7 +243,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly HORIZONTAL_ALIGN_CENTER = 'center';
+            static readonly HORIZONTAL_ALIGN_CENTER;
 
             /**
              * If the total item width is smaller than the width of the bounds, the
@@ -254,7 +253,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly HORIZONTAL_ALIGN_RIGHT = 'right';
+            static readonly HORIZONTAL_ALIGN_RIGHT;
 
             /**
              * The space, in pixels, between items.
@@ -263,7 +262,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            gap: Number = 0;
+            gap: number;
 
             /**
              * Indicates if the layout needs to be rearranged.
@@ -271,7 +270,7 @@ declare namespace GOWN {
              * @name GOWN.layout.Layout#needUpdate
              * @readonly
              */
-            readonly needUpdate: Boolean;
+            readonly needUpdate: boolean;
 
             /**
              * Shortcut to set all paddings (left, right, top, bottom)
@@ -280,7 +279,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            padding: Number = 0;
+            padding: number;
 
             /**
              * The minimum space, in pixels, above the items.
@@ -289,7 +288,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            paddingTop: Number = 0;
+            paddingTop: number;
 
             /**
              * The minimum space, in pixels, below the items.
@@ -298,7 +297,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            paddingBottom: Number = 0;
+            paddingBottom: number;
 
             /**
              * The space, in pixels, that appears to the left, before the first
@@ -308,7 +307,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            paddingLeft: Number = 0;
+            paddingLeft: number;
 
             /**
              * The space, in pixels, that appears to the right, after the last item.
@@ -317,7 +316,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            paddingRight: Number = 0;
+            paddingRight: number;
 
             /**
              * Position (and possibly resize) the supplied items.
@@ -326,7 +325,9 @@ declare namespace GOWN {
              * @param viewPortBounds {ViewPortBounds}
              */
             /* jshint unused: false */
-            layout(items: [], viewPortBounds): void;
+            // layout(items: any[], viewPortBounds);
+            layout(items: any[], maxWidth: number, maxHeight: number): number[];
+
         }
 
         class LayoutAlignment extends GOWN.layout.Layout {
@@ -338,7 +339,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * Vertical alignment
@@ -347,7 +348,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static VERTICAL_ALIGNMENT = 'vertical';
+            static readonly VERTICAL_ALIGNMENT;
 
             /**
              * Horizontal alignment
@@ -356,7 +357,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static HORIZONTAL_ALIGNMENT = 'horizontal';
+            static readonly HORIZONTAL_ALIGNMENT;
 
             /**
              * Apply percentage width/height to items.
@@ -371,7 +372,7 @@ declare namespace GOWN {
              * @param explicit The space we have for the components {Number}
              * @param [alignment=LayoutAlignment.VERTICAL_ALIGNMENT] The alignment mode {String}
              */
-            applyFixedPercent(items: [], explicit: Number, alignment: String): void;
+            applyFixedPercent(items: any[], explicit: number, alignment: String);
 
             /**
              * Apply percentage width/height to items.
@@ -387,7 +388,7 @@ declare namespace GOWN {
              * @param items The items which get new width and height according to the percent {Array}
              * @param explicit space we have for the components {Number}
              */
-            applyPercent(items: [], explicit: Number): void;
+            applyPercent(items: any[], explicit: number);
 
             /**
              * Calculate the layout for a container (and its children)
@@ -395,7 +396,7 @@ declare namespace GOWN {
              * @param container The container to calculate the layout for
              * @return Number[] The width and height
              */
-            layoutContainer(container: PIXI.Container): Number[];
+            layoutContainer(container: PIXI.Container): number[];
 
             /**
              * Position (and possibly resize) the supplied items.
@@ -405,7 +406,7 @@ declare namespace GOWN {
              * @param maxHeight The maximum height for the items {Number}
              * @return Number[] The width and height
              */
-            layout(items: [], maxWidth: Number, maxHeight: Number): Number[];
+            // layout(items: any[], maxWidth: number, maxHeight: number): number[];
 
             /**
              * The space between the first and second element
@@ -413,7 +414,7 @@ declare namespace GOWN {
              * @name GOWN.layout.LayoutAlignment#firstGap
              * @type Number
              */
-            firstGap: Number;
+            firstGap: number;
 
             /**
              * The space between the last and second-to-last element
@@ -421,7 +422,7 @@ declare namespace GOWN {
              * @name GOWN.layout.LayoutAlignment#lastGap
              * @type Number
              */
-            lastGap: Number;
+            lastGap: number;
         }
 
         class HorizontalLayout extends GOWN.layout.LayoutAlignment {
@@ -434,7 +435,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * The alignment of the layout
@@ -442,7 +443,7 @@ declare namespace GOWN {
              * @type String
              * @default LayoutAlignment.HORIZONTAL_ALIGNMENT
              */
-            alignment = LayoutAlignment.HORIZONTAL_ALIGNMENT;
+            alignment;
         }
 
         class VerticalLayout extends GOWN.layout.LayoutAlignment {
@@ -455,7 +456,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * The alignment of the layout
@@ -463,7 +464,7 @@ declare namespace GOWN {
              * @type String
              * @default LayoutAlignment.VERTICAL_ALIGNMENT
              */
-            alignment = LayoutAlignment.VERTICAL_ALIGNMENT;
+            alignment;
         }
 
         class TiledLayout extends GOWN.layout.LayoutAlignment {
@@ -475,7 +476,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * Orientation by rows
@@ -484,7 +485,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly ORIENTATION_ROWS = 'rows';
+            static readonly ORIENTATION_ROWS;
 
             /**
              * Orientation by columns
@@ -493,7 +494,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly ORIENTATION_COLUMNS = 'columns';
+            static readonly ORIENTATION_COLUMNS;
 
             /**
              * If an item height is smaller than the height of a tile, the item will
@@ -503,7 +504,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_VERTICAL_ALIGN_TOP = 'top';
+            static readonly TILE_VERTICAL_ALIGN_TOP;
 
             /**
              * If an item height is smaller than the height of a tile, the item will
@@ -513,7 +514,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_VERTICAL_ALIGN_MIDDLE = 'middle';
+            static readonly TILE_VERTICAL_ALIGN_MIDDLE;
 
             /**
              * If an item height is smaller than the height of a tile, the item will
@@ -523,7 +524,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_VERTICAL_ALIGN_BOTTOM = 'bottom';
+            static readonly TILE_VERTICAL_ALIGN_BOTTOM;
 
             /**
              * The item will be resized to fit the height of the tile.
@@ -532,7 +533,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_VERTICAL_ALIGN_JUSTIFY = 'justify';
+            static readonly TILE_VERTICAL_ALIGN_JUSTIFY;
 
             /**
              * If an item width is smaller than the width of a tile, the item will
@@ -542,7 +543,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_HORIZONTAL_ALIGN_LEFT = 'left';
+            static readonly TILE_HORIZONTAL_ALIGN_LEFT;
 
             /**
              * If an item width is smaller than the width of a tile, the item will
@@ -552,7 +553,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_HORIZONTAL_ALIGN_CENTER = 'center';
+            static readonly TILE_HORIZONTAL_ALIGN_CENTER;
 
             /**
              * If an item width is smaller than the width of a tile, the item will
@@ -562,7 +563,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_HORIZONTAL_ALIGN_RIGHT = 'right';
+            static readonly TILE_HORIZONTAL_ALIGN_RIGHT;
 
             /**
              * The item will be resized to fit the width of the tile.
@@ -571,7 +572,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly TILE_HORIZONTAL_ALIGN_JUSTIFY = 'justify';
+            static readonly TILE_HORIZONTAL_ALIGN_JUSTIFY;
 
             /**
              * The items will be positioned in pages horizontally from left to right.
@@ -580,7 +581,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly PAGING_HORIZONTAL = 'horizontal';
+            static readonly PAGING_HORIZONTAL;
 
             /**
              * The items will be positioned in pages vertically from top to bottom.
@@ -589,7 +590,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly PAGING_VERTICAL = 'vertical';
+            static readonly PAGING_VERTICAL;
 
             /**
              * The items will not be positioned in pages.
@@ -598,15 +599,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly PAGING_NONE = 'none';
-
-            /**
-             * Calculate the layout for a container (and its children)
-             *
-             * @param container The container to calculate the layout for
-             * @return Number[] The width and height
-             */
-            layoutContainer(container: PIXI.Container): Number[];
+            static readonly PAGING_NONE;
 
             /**
              * Position (and possibly resize) the supplied items.
@@ -616,7 +609,7 @@ declare namespace GOWN {
              * @param maxHeight The maximum height for the items {Number}
              * @return Number[] The width and height
              */
-            layout(items: [], maxWidth: Number, maxHeight: Number): Number[];
+            layout(items: any[], maxWidth: number, maxHeight: number): number[];
 
             /**
              * Use the same width and height for tiles (calculated by biggest square)
@@ -625,7 +618,7 @@ declare namespace GOWN {
              * @type bool
              * @default false
              */
-            useSquareTiles: Boolean = false;
+            useSquareTiles: boolean;
         }
 
         class TiledColumnsLayout extends GOWN.layout.TiledLayout {
@@ -638,7 +631,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * Quickly sets both <code>horizontalGap</code> and <code>verticalGap</code>
@@ -653,7 +646,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            gap: Number = 0;
+            gap: number;
         }
 
 
@@ -667,7 +660,7 @@ declare namespace GOWN {
              * @memberof GOWN.layout
              * @constructor
              */
-            constructor(): void;
+            constructor();
 
             /**
              * Quickly sets both <code>horizontalGap</code> and <code>verticalGap</code>
@@ -682,7 +675,7 @@ declare namespace GOWN {
              * @type Number
              * @default 0
              */
-            gap: Number = 0;
+            gap: number;
 
         }
     }
@@ -708,7 +701,7 @@ declare namespace GOWN {
          * @param [renderer=PIXI.autoDetectRenderer()] {PIXI.WebGLRenderer|PIXI.CanvasRenderer} Renderer of the canvas
          * @param [stage=new PIXI.Container()] {PIXI.Container} Root container
          */
-        constructor(config?: { backgroundColor }, screenMode?: String = Application.SCREEN_MODE_RESIZE, parentId?: String, width?: Number = 800, height?: Number = 600, renderer?: PIXI.WebGLRenderer | PIXI.CanvasRenderer = PIXI.autoDetectRenderer(), stage?: PIXI.Container = new PIXI.Container()): void;
+        constructor(config?: { backgroundColor }, screenMode?: String, parentId?: String, width?, height?, renderer?: PIXI.WebGLRenderer | PIXI.CanvasRenderer, stage?: PIXI.Container);
 
         /**
          * Use fixed width/height in pixel.
@@ -743,7 +736,7 @@ declare namespace GOWN {
          * @name GOWN.Application#background
          * @type Number|Number[]
          */
-        background: Number | Number[];
+        background: number | Number[];
 
         /**
          * Allow layouting of children
@@ -764,7 +757,7 @@ declare namespace GOWN {
         /**
          * Call requestAnimationFrame to render the application at max. FPS
          */
-        animate(): void;
+        animate();
 
         /**
          * Clean application: remove event listener, free memory
@@ -773,17 +766,17 @@ declare namespace GOWN {
          * @param [destroyChildren=false] {boolean} if set to true, all the children will have their destroy method called as well
          * @param [removeCanvas=true] {boolean} destroys the canvas and remove it from the dom tree
          */
-        destroy(destroyChildren?: Boolean = false, removeCanvas?: Boolean = true): void;
+        destroy(destroyChildren?: boolean, removeCanvas?: boolean);
 
         /**
          * called when the browser window / the application is resized will set the dimensions of the canvas and layout children (if it has a layout)
          */
-        onResize(): void;
+        onResize();
 
         /**
          * Redraw scene, apply layout if required
          */
-        redraw(): void;
+        redraw();
     }
 
     class AutoComplete extends GOWN.TextInput {
@@ -798,7 +791,7 @@ declare namespace GOWN {
          * @param [theme] theme for auto complete {GOWN.Theme}
          * @param [skinName=SKIN_NAME] name of the auto complete skin {String}
          */
-        constructor(text: String, theme?: GOWN.Theme, skinName?: String = SKIN_NAME): void;
+        constructor(text: String, theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Click state
@@ -807,7 +800,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly CLICKED: String = 'clicked';
+        static readonly CLICKED: String;
 
         /**
          * Hover state
@@ -816,7 +809,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly HOVER_CONTAINER: String = 'hoverContainer';
+        static readonly HOVER_CONTAINER: String;
 
         /**
          * The maximum number of suggestions that show at one time.
@@ -826,7 +819,7 @@ declare namespace GOWN {
          * @type Number
          * @default 5
          */
-        limitTo: Number = 5;
+        limitTo: number;
 
         /**
          * The minimum number of entered characters required to draw suggestions.
@@ -835,7 +828,7 @@ declare namespace GOWN {
          * @type Number
          * @default 2
          */
-        minAutoCompleteLength: Number = 2;
+        minAutoCompleteLength: number;
 
         /**
          * Result elements (source elements filtered by the text attribute)
@@ -844,7 +837,7 @@ declare namespace GOWN {
          * @type String[]
          * @default []
          */
-        results: String[] = [];
+        results: String[];
 
         /**
          * Source elements from which the auto complete filters the elements corresponding to the current text
@@ -853,30 +846,30 @@ declare namespace GOWN {
          * @type String[]
          * @default []
          */
-        source: String[] = [];
+        source: String[];
 
         /**
          * Draw the results
          *
          * @param text Text to filter the source elements {String}
          */
-        drawResults(text: String): void;
+        drawResults(text: String);
 
         /**
          * Update the hover result element
          * @param elementText
          */
-        hoverResultElement(elementText): void;
+        hoverResultElement(elementText);
 
         /**
          * Redraw the results
          */
-        redrawResult(): void;
+        redrawResult();
 
         /**
          * Remove the hover result element
          */
-        removeHoverResultElement(): void;
+        removeHoverResultElement();
 
         /**
          * Close results and set the text
@@ -890,12 +883,12 @@ declare namespace GOWN {
          *
          * @param text The text to set {String}
          */
-        setText(text: String): void;
+        setText(text: String);
 
         /**
          * Close the results
          */
-        toggleResults(): void;
+        toggleResults();
     }
 
     class Button extends GOWN.Skinable {
@@ -910,7 +903,7 @@ declare namespace GOWN {
          * @param [theme] theme for the button {GOWN.Theme}
          * @param [skinName=Button.SKIN_NAME] name of the button skin {String}
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Down state: mouse button is pressed or finger touches the screen
@@ -919,7 +912,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly DOWN: String = 'down';
+        static readonly DOWN: String;
 
         /**
          * Hover state: mouse pointer hovers over the button
@@ -929,7 +922,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly HOVER: String = 'hover';
+        static readonly HOVER: String;
 
         /**
         * Out state: mouse pointer leaves the button
@@ -939,7 +932,7 @@ declare namespace GOWN {
         * @final
         * @type String
         */
-        static readonly OUT: String = 'out';
+        static readonly OUT: String;
 
         /**
          * Default button skin name
@@ -948,7 +941,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'button';
+        static readonly SKIN_NAME: String;
 
         /**
          * Dispatched when the button is triggered.
@@ -957,7 +950,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly TRIGGERED: String = 'triggered';
+        static readonly TRIGGERED: String;
 
         /**
          * Up state: mouse button is released or finger is removed from the screen
@@ -966,7 +959,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly UP: String = 'up';
+        static readonly UP: String;
 
         /**
          * Create/Update the label of the button.
@@ -975,6 +968,12 @@ declare namespace GOWN {
          * @type String
          */
         label: String;
+
+        skinCache: {
+            up: PIXI.DisplayObject,
+            down: PIXI.DisplayObject,
+            hover: PIXI.DisplayObject
+        };
     }
 
     class Check extends GOWN.ToggleButton {
@@ -989,7 +988,7 @@ declare namespace GOWN {
          * @param [theme] theme for the button {GOWN.Theme}
          * @param [skinName=Check.SKIN_NAME] name of the check skin {String}
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Default check skin name
@@ -998,7 +997,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        SKIN_NAME: String = 'check';
+        SKIN_NAME: String;
     }
 
     class InputControl extends GOWN.Skinable {
@@ -1015,7 +1014,7 @@ declare namespace GOWN {
          * @constructor
          * @param [theme] theme for the input control {GOWN.Theme}
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * Currently selected input control (used for tab index)
@@ -1023,7 +1022,7 @@ declare namespace GOWN {
          * @static
          * @type GOWN.InputControl
          */
-        static currentInput = null;
+        static currentInput;
 
         /**
          * Down state: mouse button is pressed or finger touches the screen
@@ -1032,7 +1031,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly DOWN: String = 'down';
+        static readonly DOWN: String;
 
         /**
          * Hover state: mouse pointer hovers over the button
@@ -1042,7 +1041,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly HOVER: String = 'hover';
+        static readonly HOVER: String;
 
         /**
          * Hover state: mouse pointer hovers over the button
@@ -1052,7 +1051,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly OUT: String = 'out';
+        static readonly OUT: String;
 
         /**
          * Up state: mouse button is released or finger is removed from the screen
@@ -1061,16 +1060,16 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly UP: String = 'up';
+        static readonly UP: String;
 
         /**
          * Prevent other interaction (touch/move) on this component
          * 
          * @name GOWN.InputControl#autoPreventInteraction
-         * @type Boolean
+         * @type boolean
          * @default false
          */
-        autoPreventInteraction: Boolean = false;
+        autoPreventInteraction: boolean;
 
         /**
          * Interval for the cursor (in milliseconds)
@@ -1079,7 +1078,7 @@ declare namespace GOWN {
          * @type Number
          * @default 500
          */
-        blinkInterval: Number = 500;
+        blinkInterval: number;
 
         /**
          * The current state
@@ -1089,7 +1088,7 @@ declare namespace GOWN {
          * @type String
          * @default InputControl.UP
          */
-        currentState: String = InputControl.UP;
+        currentState: String;
 
         /**
          * Determine if the input has the focus
@@ -1098,7 +1097,7 @@ declare namespace GOWN {
          * @type bool
          * @default false
          */
-        hasFocus: Boolean = false;
+        hasFocus: boolean;
 
         /**
          * The maximum number of characters that may be entered. If 0,
@@ -1109,7 +1108,7 @@ declare namespace GOWN {
          * @type String
          * @default 0
          */
-        maxChars: Number = 0;
+        maxChars: number;
 
         /**
          * TODO
@@ -1117,7 +1116,7 @@ declare namespace GOWN {
          * @type bool
          * @default true
          */
-        receiveKeys: Boolean = true;
+        receiveKeys: boolean;
 
         /**
          * Text selection background
@@ -1147,12 +1146,12 @@ declare namespace GOWN {
         /**
          * Blur the text input (remove focus)
          */
-        blur(): void;
+        blur();
 
         /**
          * Delete the selected text
          */
-        deleteSelection(): void;
+        deleteSelection();
 
         /**
          * Delete text from a start position to an end position
@@ -1161,29 +1160,29 @@ declare namespace GOWN {
          * @param toPos end position {Number}
          * @returns {String}
          */
-        deleteText(fromPos: Number, toPos: Number): String;
+        deleteText(fromPos: number, toPos: number): String;
 
         /**
          * Focus on this input and set it as current
          */
-        focus(): void;
+        focus();
 
         /**
          * Insert a char at the current cursor position
          *
          * @param char The char that gets inserted {String}
          */
-        insertChar(char: String): void;
+        insertChar(char: String);
 
         /**
          * Move the cursor left
          */
-        moveCursorLeft(): void;
+        moveCursorLeft();
 
         /**
          * Move the cursor right
          */
-        moveCursorRight(): void;
+        moveCursorRight();
 
         /**
          * Height of the line in pixel
@@ -1191,7 +1190,7 @@ declare namespace GOWN {
          *
          * @returns {Number}
          */
-        lineHeight(): Number;
+        lineHeight(): number;
 
         /**
          * From pixel position on the text to character position inside the text
@@ -1200,19 +1199,19 @@ declare namespace GOWN {
          * @param pixelPos Pixel position of the mouse on the text
          * @returns {Number} Position in the text
          */
-        pixelToTextPos(pixelPos): Number;
+        pixelToTextPos(pixelPos): number;
 
         /**
          * Set the cursor position on the text
          */
-        setCursorPos(): void;
+        setCursorPos();
 
         /**
          * Set the input control text.
          *
          * @param text The text to set {String}
          */
-        setText(text: String): void;
+        setText(text: String);
 
         /**
          * From position in the text to pixel position
@@ -1222,7 +1221,7 @@ declare namespace GOWN {
          * @param [position] point that will be set with the pixel position and returned {PIXI.Point}
          * @returns {PIXI.Point} Pixel position
          */
-        textToPixelPos(textPos: Number, position?: PIXI.Point): PIXI.Point;
+        textToPixelPos(textPos: number, position?: PIXI.Point): PIXI.Point;
 
         /**
          * Get the width of a text
@@ -1230,7 +1229,7 @@ declare namespace GOWN {
          * @param text The text to get the width from {String}
          * @returns {Number}
          */
-        textWidth(text: String): Number;
+        textWidth(text: String): number;
 
         /**
          * Set the selected text
@@ -1239,7 +1238,7 @@ declare namespace GOWN {
          * @param end End position in the text {Number}
          * @returns {boolean}
          */
-        updateSelection(start: Number, end: Number): Boolean;
+        updateSelection(start: number, end: number): boolean;
     }
 
     class LayoutGroup extends GOWN.Control {
@@ -1254,7 +1253,7 @@ declare namespace GOWN {
          * @param [maxWidth=Infinity] The maximum width of the layout group {Number}
          * @param [maxHeight=Infinity] The maximum height of the layout group {Number}
          */
-        constructor(layout?: GOWN.LayoutAlignment, maxWidth?: Number, maxHeight?: Number): void;
+        constructor(layout?: GOWN.layout.LayoutAlignment, maxWidth?: number, maxHeight?: number);
 
         /**
          * The layout for the layout group
@@ -1262,7 +1261,7 @@ declare namespace GOWN {
          * @name GOWN.LayoutGroup#layout
          * @type GOWN.LayoutAlignment
          */
-        layout: GOWN.LayoutAlignment;
+        layout: GOWN.layout.LayoutAlignment;
 
         /**
          * The maximum height of the layout group
@@ -1270,7 +1269,7 @@ declare namespace GOWN {
          * @name GOWN.LayoutGroup#maxHeight
          * @type Number
          */
-        maxHeight: Number;
+        maxHeight: number;
 
         /**
          * The maximum width of the layout group
@@ -1278,7 +1277,7 @@ declare namespace GOWN {
          * @name GOWN.LayoutGroup#maxWidth
          * @type Number
          */
-        maxWidth: Number;
+        maxWidth: number;
 
         /**
          * The percentage height of the positioned children
@@ -1286,7 +1285,7 @@ declare namespace GOWN {
          * @name GOWN.LayoutGroup#percentHeight
          * @type Number
          */
-        percentHeight: Number;
+        percentHeight: number;
 
         /**
          * The percentage width of the positioned children
@@ -1294,33 +1293,14 @@ declare namespace GOWN {
          * @name GOWN.LayoutGroup#percentWidth
          * @type Number
          */
-        percentWidth: Number;
-
-        /**
-         * Adds one or more children to the container.
-         *
-         * Multiple items can be added like so: `myContainer.addChild(thingOne, thingTwo, thingThree)`
-         *
-         * @param {...PIXI.DisplayObject} child - The DisplayObject(s) to add to the container
-         * @return {PIXI.DisplayObject} The first child that was added.
-         */
-        addChild(child): PIXI.DisplayObject;
-
-        /**
-         * Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown
-         *
-         * @param {PIXI.DisplayObject} child - The child to add
-         * @param {number} index - The index to place the child in
-         * @return {PIXI.DisplayObject} The child that was added.
-         */
-        addChildAt(child: PIXI.DisplayObject, pos: number): PIXI.DisplayObject;
+        percentWidth: number;
 
         /**
          * Add some space between children
          *
          * @param space Space between children {Number}
          */
-        addSpacer(space: Number): void;
+        addSpacer(space: number);
 
         /**
          * Indicates if the given child is inside the viewport (only used for scrolling)
@@ -1332,7 +1312,7 @@ declare namespace GOWN {
          * @param height Height of the viewport {Number}
          * @returns {boolean}
          */
-        childIsRenderAble(child: PIXI.DisplayObject, x: Number, y: Number, width: Number, height: Number): void;
+        childIsRenderAble(child: PIXI.DisplayObject, x: number, y: number, width: number, height: number);
 
         /**
          * Update renderable (culling of non visible objects)
@@ -1342,7 +1322,7 @@ declare namespace GOWN {
          * @param width width of the viewport {Number}
          * @param height height of the viewport {Number}
          */
-        updateRenderable(x: Number, y: Number, width: Number, height: Number): void;
+        updateRenderable(x: number, y: number, width: number, height: number);
     }
 
     class List extends GOWN.Scroller {
@@ -1355,7 +1335,7 @@ declare namespace GOWN {
          * @constructor
          * @param [theme] theme for the list {GOWN.Theme}
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * Dispatched when the selected item changes.
@@ -1364,7 +1344,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly CHANGE: String = 'change';
+        static readonly CHANGE: String;
 
         /**
          * Default list skin name
@@ -1373,19 +1353,19 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'list';
+        static readonly SKIN_NAME: String;
 
         /**
          * Select one of the items
          *
          * @param item The item to select {String}
          */
-        selectItem(item: String): void;
+        selectItem(item: String);
 
         /**
          * Refresh the renderers
          */
-        refreshRenderers(): void;
+        refreshRenderers();
 
         /**
          * Set layout and pass event listener to it
@@ -1418,7 +1398,7 @@ declare namespace GOWN {
          * @name GOWN.List#allowMultipleSelection
          * @type bool
          */
-        allowMultipleSelection: Boolean;
+        allowMultipleSelection: boolean;
 
         /**
          * The index of the selected item
@@ -1426,7 +1406,7 @@ declare namespace GOWN {
          * @name GOWN.List#selectedIndex
          * @type Number
          */
-        selectedIndex: Number;
+        selectedIndex: number;
 
         /**
          * dataProvider for list.
@@ -1436,7 +1416,7 @@ declare namespace GOWN {
          * @name GOWN.List#dataProvider
          * @type Array
          */
-        dataProvider: [];
+        dataProvider: any[];
 
         // TODO: selectedItem
     }
@@ -1451,7 +1431,7 @@ declare namespace GOWN {
          * @constructor
          * @param [theme] theme for the picker list {GOWN.Theme}
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * Default picker list skin name
@@ -1460,17 +1440,17 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static SKIN_NAME: String = 'picker_list';
+        static SKIN_NAME: String;
 
         /**
          * Opens the pop-up list, if it isn't already open.
          */
-        openList(): void;
+        openList();
 
         /**
          * Closes the pop-up list, if it is open.
          */
-        closeList(): void;
+        closeList();
 
         /**
          * Set item renderer factory for the GOWN.List
@@ -1486,7 +1466,7 @@ declare namespace GOWN {
          * @name GOWN.PickerList#dataProvider
          * @type Array
          */
-        dataProvider: [];
+        dataProvider: any[];
 
         /**
          * Set item renderer properties for the GOWN.List
@@ -1499,7 +1479,7 @@ declare namespace GOWN {
         /**
          * Destroy button and list and remove button listeners
          */
-        destroy(): void;
+        destroy();
         // TODO: setter/getter for List to get selectedItem
         // TODO: prompt
         // TODO: PopupManager (!)
@@ -1516,7 +1496,7 @@ declare namespace GOWN {
          * @param [theme] theme for the radio button {GOWN.Theme}
          * @param [skinName=Radio.SKIN_NAME] name of the radio button skin {String}
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Default radio button skin name
@@ -1525,7 +1505,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'radio';
+        static readonly SKIN_NAME: String;
 
         /**
          * Set the toggle group and add this radio button to it
@@ -1548,7 +1528,7 @@ declare namespace GOWN {
          * @param [theme] theme for the radio button {GOWN.Theme}
          */
         // TODO: remove setting value (value manipulation is for Slider only)
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * In desktop mode mouse wheel support is added (default)
@@ -1557,7 +1537,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static DESKTOP_MODE: String = 'desktop';
+        static DESKTOP_MODE: String;
 
         /**
          * Show horizontal scrollbar/slider
@@ -1566,7 +1546,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static HORIZONTAL: String = 'horizontal';
+        static HORIZONTAL: String;
 
         /**
          * In mobile mode mouse wheel support is disabled
@@ -1575,7 +1555,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static MOBILE_MODE: String = 'mobile';
+        static MOBILE_MODE: String;
 
         /**
          * Show vertical scrollbar/slider
@@ -1584,7 +1564,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static VERTICAL: String = 'vertical';
+        static VERTICAL: String;
 
         /**
          * The scrollable direction
@@ -1593,15 +1573,15 @@ declare namespace GOWN {
          * @type String
          * @default Scrollable.HORIZONTAL
          */
-        direction: String = Scrollable.HORIZONTAL;
+        direction: String;
 
         /**
          * Inverse the progress bar
          *
          * @name GOWN.Scrollable#inverse
-         * @type Boolean
+         * @type boolean
          */
-        inverse: Boolean;
+        inverse: boolean;
 
         /**
          * Set maximum and update value if necessary
@@ -1610,7 +1590,7 @@ declare namespace GOWN {
          * @type Number
          * @default 100
          */
-        maximum: Number = 100;
+        maximum: number;
 
         /**
          * Set minimum and update value if necessary
@@ -1619,7 +1599,7 @@ declare namespace GOWN {
          * @type Number
          * @default 0
          */
-        minimum: Number = 0;
+        minimum: number;
 
         /**
          * The scrollable mode
@@ -1628,7 +1608,7 @@ declare namespace GOWN {
          * @type String
          * @default Scrollable.DESKTOP_MODE
          */
-        mode: String = Scrollable.DESKTOP_MODE;
+        mode: String;
 
         /**
          * Number of pixels you scroll at a time (if the event delta is 1 / -1)
@@ -1637,7 +1617,7 @@ declare namespace GOWN {
          * @type Number
          * @default 10
          */
-        scrolldelta: Number = 10;
+        scrolldelta: number;
 
         /**
          * Set value (between minimum and maximum)
@@ -1646,7 +1626,7 @@ declare namespace GOWN {
          * @type Number
          * @default 0
          */
-        value: Number = 0;
+        value: number;
 
         /**
          * Returns the max. height in pixel
@@ -1654,7 +1634,7 @@ declare namespace GOWN {
          *
          * @returns {Number}
          */
-        maxHeight(): Number;
+        maxHeight(): number;
 
         /**
          * Returns the max. width in pixel
@@ -1662,7 +1642,7 @@ declare namespace GOWN {
          *
          * @returns {Number}
          */
-        maxWidth(): Number;
+        maxWidth(): number;
 
         /**
          * Move the thumb on the scroll bar within its bounds
@@ -1672,7 +1652,7 @@ declare namespace GOWN {
          * @returns {boolean} Returns true if the position of the thumb has been
          * moved
          */
-        moveThumb(x: Number, y: Number): Boolean;
+        moveThumb(x: number, y: number): boolean;
 
         /**
          * Calculate value of slider based on the current pixel position of the thumb
@@ -1680,19 +1660,19 @@ declare namespace GOWN {
          * @param position current pixel position of the thumb {Number}
          * @returns {Number} Value between minimum and maximum
          */
-        pixelToValue(position: Number): Number;
+        pixelToValue(position: number): number;
 
         /**
          * Position the thumb to a given value
          *
          * @param value The value to which the thumb gets moved {Number}
          */
-        positionThumb(value: Number): void;
+        positionThumb(value: number);
 
         /**
          * Scroll to a specific position (not implemented yet)
          */
-        scrollToPosition(): void;
+        scrollToPosition();
 
         /**
          * Thumb has new x/y position
@@ -1700,7 +1680,7 @@ declare namespace GOWN {
          * @param x x-position that has been scrolled to (ignored when vertical) {Number}
          * @param y y-position that has been scrolled to (ignored when horizontal) {Number}
          */
-        thumbMoved(x: Number, y: Number): void;
+        thumbMoved(x: number, y: number);
 
         /**
          * Calculate current pixel position of thumb based on given value
@@ -1708,7 +1688,7 @@ declare namespace GOWN {
          * @param value The value of the thumb position {Number}
          * @returns {Number} Position of the scroll thumb in pixel
          */
-        valueToPixel(value: Number): Number;
+        valueToPixel(value: number): number;
     }
 
     class ScrollBar extends GOWN.Scrollable {
@@ -1723,7 +1703,7 @@ declare namespace GOWN {
          * @param [direction=Scrollable.HORIZONTAL] Direction of the scroll bar (horizontal/vertical) {String}
          * @param [theme] theme for the scrollbar {GOWN.Theme}
          */
-        constructor(direction?: String, theme?: GOWN.Theme): void;
+        constructor(direction?: String, theme?: GOWN.Theme);
 
         /**
          * Default scroll bar skin name
@@ -1732,7 +1712,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'scroll_bar';
+        static readonly SKIN_NAME: String;
 
         /**
          * The minimum thumb width
@@ -1740,7 +1720,7 @@ declare namespace GOWN {
          * @type Number
          * @default 20
          */
-        minThumbWidth: Number = 20;
+        minThumbWidth: number;
 
         /**
          * The minimum thumb height
@@ -1748,7 +1728,7 @@ declare namespace GOWN {
          * @type Number
          * @default 20
          */
-        minThumbHeight: Number = 20;
+        minThumbHeight: number;
     }
 
     class ScrollContainer extends GOWN.Scroller {
@@ -1761,7 +1741,7 @@ declare namespace GOWN {
          * @constructor
          * @param [theme] theme for the scroll container {GOWN.Theme}
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
     }
 
     class Scroller extends GOWN.Control {
@@ -1778,80 +1758,80 @@ declare namespace GOWN {
          * @memberof GOWN
          * @constructor
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * The scroller may scroll if the view port is larger than the
          * scroller's bounds. Only than the scroll bar will be visible.
          */
-        static readonly SCROLL_POLICY_AUTO = 'auto';
+        static readonly SCROLL_POLICY_AUTO;
 
         /**
          * The scroller will always scroll, the scroll bar will always be visible.
          */
-        static readonly SCROLL_POLICY_ON = 'on';
+        static readonly SCROLL_POLICY_ON;
 
         /**
          * The scroller does not scroll at all, the scroll bar will never be visible.
          */
-        static readonly SCROLL_POLICY_OFF = 'off';
+        static readonly SCROLL_POLICY_OFF;
 
         /**
          * The user may touch anywhere on the scroller and drag to scroll. The
          * scroll bars will be visual indicator of position, but they will not
          * be interactive.
          */
-        static readonly INTERACTION_TOUCH = 'touch';
+        static readonly INTERACTION_TOUCH;
 
         /**
          * Allow touch and use the Scrollbars
          */
-        static readonly INTERACTION_TOUCH_AND_SCROLL_BARS = 'touchAndScrollBars';
+        static readonly INTERACTION_TOUCH_AND_SCROLL_BARS;
 
         /**
          * The user may only interact with the scroll bars to scroll.
          */
-        static readonly INTERACTION_MOUSE = "scrollBars";
-        static readonly INTERACTION_SCROLL_BARS = 'scrollBars';
+        static readonly INTERACTION_MOUSE;
+        static readonly INTERACTION_SCROLL_BARS;
 
-        static readonly HELPER_POINT = new PIXI.Point(0, 0);
-        static readonly INVALIDATION_FLAG_SCROLL_BAR_RENDERER = 'scrollBarRenderer';
-        static readonly INVALIDATION_FLAG_PENDING_SCROLL = 'pendingScroll';
-        static readonly INVALIDATION_FLAG_PENDING_REVEAL_SCROLL_BARS = 'pendingRevealScrollBars';
-        static readonly SCROLL_BAR_DISPLAY_MODE_FLOAT = 'float';
-        static readonly SCROLL_BAR_DISPLAY_MODE_FIXED = 'fixed';
-        static readonly SCROLL_BAR_DISPLAY_MODE_FIXED_FLOAT = 'fixedFloat';
-        static readonly SCROLL_BAR_DISPLAY_MODE_NONE = 'none';
-        static readonly VERTICAL_SCROLL_BAR_POSITION_RIGHT = 'right';
-        static readonly VERTICAL_SCROLL_BAR_POSITION_LEFT = 'left';
-        static readonly INTERACTION_MODE_TOUCH = 'touch';
-        static readonly INTERACTION_MODE_MOUSE = 'mouse';
-        static readonly INTERACTION_MODE_TOUCH_AND_SCROLL_BARS = 'touchAndScrollBars';
-        static readonly MOUSE_WHEEL_SCROLL_DIRECTION_VERTICAL = 'vertical';
-        static readonly MOUSE_WHEEL_SCROLL_DIRECTION_HORIZONTAL = 'horizontal';
-        static readonly INVALIDATION_FLAG_CLIPPING = 'clipping';
-        static readonly MINIMUM_VELOCITY = 0.02;
-        static readonly CURRENT_VELOCITY_WEIGHT = 2.33;
-        static readonly VELOCITY_WEIGHTS = [1, 1.33, 1.66, 2];
-        static readonly MAXIMUM_SAVED_VELOCITY_COUNT = 4;
-        static readonly DECELERATION_RATE_NORMAL = 0.998;
-        static readonly DECELERATION_RATE_FAST = 0.99;
+        static readonly HELPER_POINT;
+        static readonly INVALIDATION_FLAG_SCROLL_BAR_RENDERER;
+        static readonly INVALIDATION_FLAG_PENDING_SCROLL;
+        static readonly INVALIDATION_FLAG_PENDING_REVEAL_SCROLL_BARS;
+        static readonly SCROLL_BAR_DISPLAY_MODE_FLOAT;
+        static readonly SCROLL_BAR_DISPLAY_MODE_FIXED;
+        static readonly SCROLL_BAR_DISPLAY_MODE_FIXED_FLOAT;
+        static readonly SCROLL_BAR_DISPLAY_MODE_NONE;
+        static readonly VERTICAL_SCROLL_BAR_POSITION_RIGHT;
+        static readonly VERTICAL_SCROLL_BAR_POSITION_LEFT;
+        static readonly INTERACTION_MODE_TOUCH;
+        static readonly INTERACTION_MODE_MOUSE;
+        static readonly INTERACTION_MODE_TOUCH_AND_SCROLL_BARS;
+        static readonly MOUSE_WHEEL_SCROLL_DIRECTION_VERTICAL;
+        static readonly MOUSE_WHEEL_SCROLL_DIRECTION_HORIZONTAL;
+        static readonly INVALIDATION_FLAG_CLIPPING;
+        static readonly MINIMUM_VELOCITY;
+        static readonly CURRENT_VELOCITY_WEIGHT;
+        static readonly VELOCITY_WEIGHTS;
+        static readonly MAXIMUM_SAVED_VELOCITY_COUNT;
+        static readonly DECELERATION_RATE_NORMAL;
+        static readonly DECELERATION_RATE_FAST;
         // static DEFAULT_CHILD_STYLE_NAME_HORIZONTAL_SCROLL_BAR = 'scroller-horizontal-scroll-bar';
         // static DEFAULT_CHILD_STYLE_NAME_VERTICAL_SCROLL_BAR = 'scroller-vertical-scroll-bar';
-        static readonly FUZZY_PAGE_SIZE_PADDING = 0.000001;
-        static readonly PAGE_INDEX_EPSILON = 0.01;
+        static readonly FUZZY_PAGE_SIZE_PADDING;
+        static readonly PAGE_INDEX_EPSILON;
 
         /**
          * change horizontal scroll position.
          * (will update x position of viewport next redraw)
          */
-        horizontalScrollPosition: Number;
+        horizontalScrollPosition: number;
 
         /**
          * change vertical scroll position.
          * (will update y position of viewport next redraw)
          */
-        verticalScrollPosition: Number;
+        verticalScrollPosition: number;
 
         /**
          * us a mask to clip content
@@ -1884,86 +1864,86 @@ declare namespace GOWN {
 
         horizontalScrollStep;
 
-        horizontalPageIndex: Number;
+        horizontalPageIndex: number;
 
-        horizontalScrollPolicy: Number;
+        horizontalScrollPolicy: number;
 
         verticalScrollStep;
 
-        verticalPageIndex: Number;
+        verticalPageIndex: number;
 
-        verticalScrollPolicy: Number;
+        verticalScrollPolicy: number;
 
-        pageWidth: Number;
+        pageWidth: number;
 
-        pageHeight: Number;
+        pageHeight: number;
 
-        padding: Number;
+        padding: number;
 
-        pageThrowDuration: Number;
+        pageThrowDuration: number;
 
-        scrollToPageIndex(horizontalPageIndex, verticalPageIndex, animationDuration): void;
+        scrollToPageIndex(horizontalPageIndex, verticalPageIndex, animationDuration);
 
-        refreshInteractionModeEvents(): void;
+        refreshInteractionModeEvents();
 
-        onDown(event): void;
+        onDown(event);
 
-        onUp(): void;
+        onUp();
 
-        onMove(event): void;
+        onMove(event);
 
-        checkForDrag(currentTouch): void;
+        checkForDrag(currentTouch);
         /**
          * update before draw call
          *
         
          */
-        redraw(): void;
+        redraw();
 
-        updateHorizontalScrollFromTouchPosition(touchX: Number, isScrollBar: Boolean): void;
+        updateHorizontalScrollFromTouchPosition(touchX: number, isScrollBar: boolean);
 
-        updateVerticalScrollFromTouchPosition(touchY: Number, isScrollBar: Boolean): void;
+        updateVerticalScrollFromTouchPosition(touchY: number, isScrollBar: boolean);
 
-        startScroll(): void;
+        startScroll();
 
-        stopScrolling(): void;
+        stopScrolling();
 
-        scrollToPosition(horizontalScrollPosition, verticalScrollPosition, animationDuration: Number): void;
+        scrollToPosition(horizontalScrollPosition, verticalScrollPosition, animationDuration: number);
 
-        handlePendingScroll(): void;
+        handlePendingScroll();
 
-        completeScroll(): void;
+        completeScroll();
 
-        refreshEnabled(): void;
+        refreshEnabled();
 
-        refreshScrollValues(): void;
+        refreshScrollValues();
 
-        refreshPageCount(): void;
+        refreshPageCount();
 
-        clampScrollPositions(): void;
+        clampScrollPositions();
 
-        refreshScrollSteps(): void;
+        refreshScrollSteps();
 
-        refreshMinAndMaxScrollPositions(): void;
+        refreshMinAndMaxScrollPositions();
 
-        showOrHideChildren(): void;
+        showOrHideChildren();
 
-        calculateViewPortOffsetsForFixedVerticalScrollBar(forceScrollBars, useActualBounds): void;
+        calculateViewPortOffsetsForFixedVerticalScrollBar(forceScrollBars, useActualBounds);
 
-        calculateViewPortOffsets(forceScrollBars: Boolean, useActualBounds: Boolean): void;
+        calculateViewPortOffsets(forceScrollBars: boolean, useActualBounds: boolean);
 
-        throwToPage(targetHorizontalPageIndex, targetVerticalPageIndex, duration): void;
+        throwToPage(targetHorizontalPageIndex, targetVerticalPageIndex, duration);
 
-        horizontalScrollBarHideTweenOnComplete(): void;
+        horizontalScrollBarHideTweenOnComplete();
 
-        verticalScrollBarHideTweenOnComplete(): void;
+        verticalScrollBarHideTweenOnComplete();
 
-        scrollerEnterFrameHandler(): void;
+        scrollerEnterFrameHandler();
 
         /**
          * update the rectangle that defines the clipping area
          */
-        refreshMask(): void;
+        refreshMask();
 
         /**
          * Creates and adds the <code>horizontalScrollBar</code> and
@@ -1978,21 +1958,21 @@ declare namespace GOWN {
          * @see #horizontalScrollBarFactory
          * @see #verticalScrollBarFactory
          */
-        createScrollBars(): void;
+        createScrollBars();
 
-        defaultScrollBarFactory(direction): void;
+        defaultScrollBarFactory(direction);
 
-        revealHorizontalScrollBar(): void;
+        revealHorizontalScrollBar();
 
-        revealVerticalScrollBar(): void;
+        revealVerticalScrollBar();
 
-        hideHorizontalScrollBar(): void;
+        hideHorizontalScrollBar();
 
-        hideVerticalScrollBar(): void;
+        hideVerticalScrollBar();
 
-        throwHorizontally(pixelsPerMS): void;
+        throwHorizontally(pixelsPerMS);
 
-        throwVertically(pixelsPerMS): void;
+        throwVertically(pixelsPerMS);
 
         /**
          * manage tween to throw to horizontal or vertical position
@@ -2002,7 +1982,7 @@ declare namespace GOWN {
          * @param direction {String} direction ('horizontal' or 'vertical')
          * @param duration {number} time needed to reach target position (in ms)
          */
-        _throwToTween(targetPosition, direction, duration): void;
+        _throwToTween(targetPosition, direction, duration);
 
         /**
          * throw the scroller to the specified position
@@ -2011,9 +1991,9 @@ declare namespace GOWN {
          * @param duration
          */
         //TODO: see https://github.com/BowlerHatLLC/feathers/blob/master/source/feathers/controls/Scroller.as#L4939
-        throwTo(targetHorizontalScrollPosition, targetVerticalScrollPosition, duration): void;
+        throwTo(targetHorizontalScrollPosition, targetVerticalScrollPosition, duration);
 
-        direction(): void;
+        direction();
     }
 
     class ScrollThumb extends GOWN.Button {
@@ -2028,7 +2008,7 @@ declare namespace GOWN {
          * @param [theme] theme for the scroll thumb {GOWN.Theme}
          * @param [skinName=ScrollThumb.SKIN_NAME] name of the scroll thumb skin {String}
          */
-        constructor(scrollable: GOWN.Scrollable, theme?: GOWN.Theme, skinName?: String): void;
+        constructor(scrollable: GOWN.Scrollable, theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Default scroll thumb skin name
@@ -2037,14 +2017,14 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static SKIN_NAME: String = 'scroll_thumb';
+        static SKIN_NAME: String;
 
         /**
          * Show track icon on thumb
          *
          * @param skin The new scroll thumb skin name {String}
          */
-        showTrack(skin: String): void;
+        showTrack(skin: String);
 
         /**
          * Move the thumb on the scroll bar within its bounds
@@ -2054,7 +2034,7 @@ declare namespace GOWN {
          * @returns {boolean} returns true if the position of the thumb has been
          * moved
          */
-        move(x: Number, y: Number): Boolean;
+        move(x: number, y: number): boolean;
     }
 
     class Slider extends GOWN.Scrollable {
@@ -2068,7 +2048,7 @@ declare namespace GOWN {
          * @param [theme] theme for the slider {GOWN.Theme}
          */
         // TODO: move stuff from Scrollable back here?
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * Default slider skin name
@@ -2077,7 +2057,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static SKIN_NAME = 'scroll_bar';
+        static SKIN_NAME;
     }
 
     class TextInput extends GOWN.InputControl {
@@ -2092,7 +2072,7 @@ declare namespace GOWN {
          * @param [theme] theme for the text input {GOWN.Theme}
          * @param [skinName=TextInput.SKIN_NAME] name of the text input skin {String}
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Default text area skin name
@@ -2101,7 +2081,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'text_input';
+        static readonly SKIN_NAME: String;
 
         /**
          * Set display as password (show text with "*")
@@ -2109,21 +2089,21 @@ declare namespace GOWN {
          * @name GOWN.TextInput#displayAsPassword
          * @type bool
          */
-        displayAsPassword: Boolean;
+        displayAsPassword: boolean;
 
         /**
          * Get the text lines as an array
          *
          * @returns {Array|*} Returns an array with one text line per array element
          */
-        getLines(): [] | any;
+        getLines(): any[] | any;
 
         /**
          * Set the text
          *
          * @param text The text to display {String}
          */
-        setText(text: String): void;
+        setText(text: String);
 
         // TODO: autoSizeIfNeeded
     }
@@ -2140,7 +2120,7 @@ declare namespace GOWN {
          * @param [theme] theme for the text area {GOWN.Theme}
          * @param [skinName=TextArea.SKIN_NAME] name of the text area skin {String}
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Default text area skin name
@@ -2149,7 +2129,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'text_input';
+        static readonly SKIN_NAME: String;
 
         /**
          * Calculate position in Text
@@ -2162,14 +2142,14 @@ declare namespace GOWN {
          * @param [position] Position object that gets returned {PIXI.Point}
          * @returns {PIXI.Point} returns the Line and Position in line
          */
-        textToLinePos(textPos: Number, position): PIXI.Point;
+        textToLinePos(textPos: number, position): PIXI.Point;
 
         /**
          * Get the text lines as an array
          *
          * @returns {Array|*} Returns an array with one text line per array element
          */
-        getLines(): [] | any;
+        getLines(): any[] | any;
     }
 
     class ToggleButton extends GOWN.Button {
@@ -2182,7 +2162,7 @@ declare namespace GOWN {
          * @memberof GOWN
          * @constructor
          */
-        constructor(theme?: GOWN.Theme, skinName?: String): void;
+        constructor(theme?: GOWN.Theme, skinName?: String);
 
         /**
          * Dispatched when the button is selected or deselected either
@@ -2194,7 +2174,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly CHANGE: String = 'change';
+        static readonly CHANGE: String;
 
         /**
         * Selected down state: mouse button is pressed or finger touches the screen + the toggle button is selected
@@ -2203,7 +2183,7 @@ declare namespace GOWN {
         * @final
         * @type String
         */
-        static readonly SELECTED_DOWN: String = 'selected_down';
+        static readonly SELECTED_DOWN: String;
 
         /**
          * Selected hover state: mouse pointer hovers over the button + the toggle button is selected
@@ -2213,7 +2193,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SELECTED_HOVER: String = 'selected_hover';
+        static readonly SELECTED_HOVER: String;
 
         /**
          * Selected up state: mouse button is released or finger is removed from the screen + the toggle button is selected
@@ -2222,7 +2202,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SELECTED_UP: String = 'selected_up';
+        static readonly SELECTED_UP: String;
 
         /**
          * Default toggle button skin name
@@ -2231,21 +2211,30 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_NAME: String = 'toggle_button';
+        static readonly SKIN_NAME: String;
 
         /**
          * Indicate if the button is selected (pressed)
          *
          * @name GOWN.ToggleButton#selected
-         * @type Boolean
+         * @type boolean
          * @default false
          */
-        selected: Boolean = false;
+        selected: boolean;
 
         /**
          * Toggle the state
          */
-        toggle(): void;
+        toggle();
+
+        skinCache: {
+            up: PIXI.DisplayObject,
+            down: PIXI.DisplayObject,
+            hover: PIXI.DisplayObject,
+            selected_up: PIXI.DisplayObject,
+            selected_down: PIXI.DisplayObject,
+            selected_hover: PIXI.DisplayObject
+        };
     }
 
     class ToggleGroup extends EventEmitter {
@@ -2259,7 +2248,7 @@ declare namespace GOWN {
          * @memberof GOWN
          * @constructor
          */
-        constructor(): void;
+        constructor();
 
         /**
          * Dispatched when the toggle group selection changes.
@@ -2268,7 +2257,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly CHANGE: String = 'change';
+        static readonly CHANGE: String;
 
         /**
         * Determines if the user can deselect the currently selected item or not.
@@ -2277,7 +2266,7 @@ declare namespace GOWN {
         * @type bool
         * @default true
         */
-        isSelectionRequired: Boolean = true;
+        isSelectionRequired: boolean;
 
         /**
          * The index of the currently selected toggle.
@@ -2285,7 +2274,7 @@ declare namespace GOWN {
          * @name GOWN.ToggleGroup#selectedIndex
          * @type Number
          */
-        selectedIndex: Number;
+        selectedIndex: number;
 
         /**
          * The currently selected toggle
@@ -2300,7 +2289,7 @@ declare namespace GOWN {
          *
          * @param item The toggle to add to the toggle group {GOWN.ToggleButton}
          */
-        addItem(item: GOWN.ToggleButton): void;
+        addItem(item: GOWN.ToggleButton);
 
         /**
          * Remove an toggle from the toggle group
@@ -2312,7 +2301,7 @@ declare namespace GOWN {
         /**
          * Remove all event listener, clear items-list and set selectedItem to null.
          */
-        destroy(): void;
+        destroy();
     }
 
     class ListCollection extends EventEmitter {
@@ -2330,7 +2319,7 @@ declare namespace GOWN {
          * @constructor
          * @param [data] The data source {Array}
          */
-        constructor(data: []): void;
+        constructor(data: any[]);
 
         /**
          * Dispatched when the list data gets changed.
@@ -2339,7 +2328,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly CHANGED: String = 'changed';
+        static readonly CHANGED: String;
 
         /**
          * Dispatched when the list gets cleared.
@@ -2348,7 +2337,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly RESET: String = 'reset';
+        static readonly RESET: String;
 
         /**
          * Dispatched when a list item gets removed from the list.
@@ -2357,7 +2346,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly REMOVE_ITEM: String = 'removeItem';
+        static readonly REMOVE_ITEM: String;
 
         /**
          * Dispatched when a list item gets replaced.
@@ -2366,7 +2355,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly REPLACE_ITEM: String = 'replaceItem';
+        static readonly REPLACE_ITEM: String;
 
         /**
          * Dispatched when an item gets added to the list.
@@ -2375,7 +2364,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly ADD_ITEM: String = 'addItem';
+        static readonly ADD_ITEM: String;
 
         /**
          * The data source for this collection. Has to be an array.
@@ -2383,7 +2372,7 @@ declare namespace GOWN {
          * @name GOWN.ListCollection#data
          * @type Array
          */
-        data: [];
+        data: any[];
 
         /**
          * The length of the list
@@ -2392,7 +2381,7 @@ declare namespace GOWN {
          * @type Number
          * @readonly
          */
-        readonly length: Number;
+        readonly length: number;
 
         /**
          * Add a new item between index and index+1
@@ -2400,7 +2389,7 @@ declare namespace GOWN {
          * @param item The new item {Object}
          * @param index The index where the item gets inserted {Number}
          */
-        addItemAt(item: Object, index: Number): void;
+        addItemAt(item: Object, index: number);
 
         /**
          * Checks if an item is in the list
@@ -2408,7 +2397,7 @@ declare namespace GOWN {
          * @param item The item to check {Object}
          * @returns {boolean} True if the item is in the list, otherwise false
          */
-        contains(item: Object): Boolean;
+        contains(item: Object): boolean;
 
         /**
          * Get an item at a specific index
@@ -2416,7 +2405,7 @@ declare namespace GOWN {
          * @param index The index to get the item from {Number}
          * @returns {Object} The item at the specific index
          */
-        getItemAt(index: Number): Object;
+        getItemAt(index: number): Object;
 
         /**
          * Get the index of a list item
@@ -2424,33 +2413,33 @@ declare namespace GOWN {
          * @param item The list item {Object}
          * @returns {Number} The item index
          */
-        getItemIndex(item: Object): Number;
+        getItemIndex(item: Object): number;
 
         /**
          * Pop the last item from the last
          */
-        pop(): void;
+        pop();
 
         /**
          * Push an item on the list at the last position
          *
          * @param item The item to push {Object}
          */
-        push(item: Object): void;
+        push(item: Object);
 
         /**
          * Removes all items from the list
          *
          * @param item
          */
-        removeAll(item: Object): void;
+        removeAll(item: Object);
 
         /**
          * Removes an item from the list
          *
          * @param item The item to remove {Object}
          */
-        removeItem(item: Object): void;
+        removeItem(item: Object);
 
         /**
          * Removes the item at the specific index from the collection and
@@ -2459,7 +2448,7 @@ declare namespace GOWN {
          * @param index The item index {Number}
          * @returns {Object}
          */
-        removeItemAt(index: Number): Object;
+        removeItemAt(index: number): Object;
 
         /**
          * Set an item at a specific index
@@ -2467,19 +2456,19 @@ declare namespace GOWN {
          * @param item The item that gets added {Object}
          * @param index The index where the item gets set {Number}
          */
-        setItemAt(item: Object, index: Number): void;
+        setItemAt(item: Object, index: number);
 
         /**
          * Remove the item at the front of the list
          */
-        shift(): void;
+        shift();
 
         /**
          * Add an item to the front of the list
          *
          * @param item The item to add {Object}
          */
-        unshift(item: Object): void;
+        unshift(item: Object);
     }
 
     class DefaultListItemRenderer extends GOWN.ToggleButton {
@@ -2492,7 +2481,7 @@ declare namespace GOWN {
          * @constructor
          * @param [theme] theme for the DefaultListItemRenderer {GOWN.Theme}
          */
-        constructor(theme?: GOWN.Theme): void;
+        constructor(theme?: GOWN.Theme);
 
         /**
          * Data
@@ -2508,7 +2497,7 @@ declare namespace GOWN {
          * @type String
          * @default "text"
          */
-        labelField: String = "text";
+        labelField: String;
 
         /**
          * A function used to generate label text for a specific item. If this function is not null, then the labelField will be ignored.
@@ -2519,7 +2508,7 @@ declare namespace GOWN {
          * @type Function
          * @default null
          */
-        labelFunction: Function = null;
+        labelFunction: Function;
 
 
         // performance increase to avoid using call.. (10x faster)
@@ -2531,7 +2520,7 @@ declare namespace GOWN {
          *
          * <p>Don't forget to handle the case where the data is <code>null</code>.</p>
          */
-        commitData(): void;
+        commitData();
 
         /**
          * Using <code>labelField</code> and <code>labelFunction</code>,
@@ -2545,12 +2534,12 @@ declare namespace GOWN {
          *
          * @param item the item that gets converted to a label
          */
-        itemToLabel(item): void;
+        itemToLabel(item);
 
         /**
          * Update button text before draw call
          */
-        redraw(): void;
+        redraw();
     }
 
     class Theme {
@@ -2562,7 +2551,7 @@ declare namespace GOWN {
          * @constructor
          * @param [global=true] Set theme as the global GOWN.theme
          */
-        constructor(global: Boolean = true): void;
+        constructor(global: boolean);
 
         /**
          * Dispatched when a skin has changed
@@ -2571,7 +2560,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly SKIN_CHANGED: String = 'skin_changed';
+        static readonly SKIN_CHANGED: String;
 
         /**
          * Dispatched when a theme texture has loaded
@@ -2580,7 +2569,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly LOADED: String = 'loaded';
+        static readonly LOADED: String;
 
         /**
          * Dispatched when a theme texture has been loaded and all controls have an assigned skin
@@ -2589,7 +2578,7 @@ declare namespace GOWN {
          * @final
          * @type String
          */
-        static readonly COMPLETE: String = 'complete';
+        static readonly COMPLETE: String;
 
         /**
          * Shortcut to remove the theme from the global context
@@ -2600,10 +2589,10 @@ declare namespace GOWN {
          * Desktop themes have a hover skin if the mouse moves over the button
          *
          * @name GOWN.Theme#hoverSkin
-         * @type Boolean
+         * @type boolean
          * @default true
          */
-        hoverSkin: Boolean = true;
+        hoverSkin: boolean;
 
         /**
          * The default font for all labels (e.g. button label)
@@ -2625,22 +2614,22 @@ declare namespace GOWN {
          * Use an own skin for scroll/slider track (uses the default button skin otherwise)
          * 
          * @name GOWN.Theme#thumbSkin
-         * @type Boolean
+         * @type boolean
          */
-        thumbSkin: Boolean = true;
+        thumbSkin: boolean;
 
         /**
          * Set up the asset loader and load files
          *
          * @param jsonPath The path to the json file {String}
          */
-        addImage(jsonPath: String): void;
+        addImage(jsonPath: String);
 
         /**
          * Apply the theme to the controls
          * (normally executed only once after the texture has been loaded)
          */
-        applyTheme(): void;
+        applyTheme();
 
         /**
          * Create a new Sprite from an image name
@@ -2661,7 +2650,7 @@ declare namespace GOWN {
          * (only needed if we want to scale the image smaller than the original) {Number}
          * @return {Function}
          */
-        getScaleContainer(name: String, grid: PIXI.Rectangle, middleWidth: Number, centerHeight: Number): void;
+        getScaleContainer(name: String, grid: PIXI.Rectangle, middleWidth: number, centerHeight: number);
 
         /**
          * Get a skin by a component name and state (or type)
@@ -2682,14 +2671,14 @@ declare namespace GOWN {
          * @param loader The loader {Loader}
          * @param resources The loaded resources {Object}
          */
-        loadComplete(loader: PIXI.loaders.Loader, resources: Object): void;
+        loadComplete(loader: PIXI.loaders.Loader, resources: Object);
 
         /**
          * Set the texture cache (normally called when loading is complete)
          *
          * @param resources The loaded resources {Object}
          */
-        setCache(resources: Object): void;
+        setCache(resources: Object);
 
         /**
          * Set the skin for a UI component
@@ -2698,7 +2687,7 @@ declare namespace GOWN {
          * @param id Id for the skin (e.g. state when the skinning function will be applied {String}
          * @param skin skin-function that will executed once the component gets updated {function}
          */
-        setSkin(comp: String, id: String, skin: Function): void;
+        setSkin(comp: String, id: String, skin: Function);
     }
 
     class ThemeFont {
@@ -2710,7 +2699,7 @@ declare namespace GOWN {
          * @constructor
          * @param data The font style object {Object}
          */
-        constructor(data: Object): void;
+        constructor(data: Object);
 
         /**
          * Clone the ThemeFont instance
@@ -2735,7 +2724,7 @@ declare namespace GOWN {
          * @type Number
          * @default 12
          */
-        fontSize: Number = 12;
+        fontSize: number;
 
         /**
          * The font family
@@ -2744,7 +2733,7 @@ declare namespace GOWN {
          * @type String
          * @default 'Arial'
          */
-        fontFamily: String = 'Arial';
+        fontFamily: String;
     }
 
     class ThemeParser extends GOWN.Theme {
@@ -2758,17 +2747,17 @@ declare namespace GOWN {
          * @param jsonPath The path to the .json file {String}
          * @param [global=true] Set theme as the global GOWN.theme {bool}
          */
-        constructor(jsonPath: String, global?: Boolean = true): void;
+        constructor(jsonPath: String, global?: boolean);
 
         //TODO
-        DATA_LOADED: String = 'data_loaded';
+        DATA_LOADED: String;
 
         /**
          * Adds the theme data located at the specified path
          *
          * @param jsonPath The path the .json file
          */
-        addThemeData(jsonPath: String): void;
+        addThemeData(jsonPath: String);
 
         /**
          * Get the scale9 grid data from the theme data
@@ -2776,7 +2765,7 @@ declare namespace GOWN {
          * @param scale Rectangle position and size {Number[]}
          * @return {PIXI.Rectangle}
          */
-        getScale9(scale: Number[]): PIXI.Rectangle;
+        getScale9(scale: number[]): PIXI.Rectangle;
 
         /**
          * Get the component classes that can create skins (in general all GOWN.shapes).
@@ -2793,7 +2782,7 @@ declare namespace GOWN {
          * @param skinData The data gathered from previous runs {String}
          * @param data The new data that will be copied into skinData {Object}
          */
-        getSkinData(stateName: String, skinData: String, data: Object): void;
+        getSkinData(stateName: String, skinData: String, data: Object);
 
         /**
          * Executed when the image has been loaded.
@@ -2805,14 +2794,14 @@ declare namespace GOWN {
          * @param loader The loader {Loader}
          * @param resources The loaded resources {Object}
          */
-        loadComplete(loader: PIXI.loaders.Loader, resources: Object): void;
+        loadComplete(loader: PIXI.loaders.Loader, resources: Object);
 
         /**
          * Parse the theme data
          *
          * @param data The theme data {Object}
          */
-        parseData(data: Object): void;
+        parseData(data: Object);
 
         /**
          * Create a new skin from the theme data
@@ -2842,7 +2831,7 @@ declare namespace GOWN {
         // TODO: orientation change for cordova and cocoon ('orientationchange' and Cocoon.Device.getOrientation())
         // TODO: take a look at phaser ScaleManager - see https://github.com/photonstorm/phaser/blob/v2.4.2/src/core/ScaleManager.js
         // TODO: check single Canvas-DOM-Element, not only whole window (see https://github.com/marcj/css-element-queries )
-        constructor(renderer: PIXI.CanvasRenderer | PIXI.WebGLRenderer, options?: { autoPreventDefault?: Boolean = true, fullscreen?: Boolean = false }): void;
+        constructor(renderer: PIXI.CanvasRenderer | PIXI.WebGLRenderer, options?: { autoPreventDefault?: boolean, fullscreen?: boolean });
 
         /**
         * The waiting time after the resize event before updating
@@ -2852,15 +2841,15 @@ declare namespace GOWN {
         * @final
         * @type String
         */
-        static readonly RESIZE_DONE_TIMEOUT: String = 100;
+        static readonly RESIZE_DONE_TIMEOUT: String;
 
         /**
          * Should default browser actions automatically be prevented.
          * 
          * @name GOWN.ResizeManager#autoPreventDefault
-         * @type Boolean
+         * @type boolean
          */
-        autoPreventDefault: Boolean = true;
+        autoPreventDefault: boolean;
 
         /**
          * TODO:
@@ -2871,9 +2860,9 @@ declare namespace GOWN {
          * Should we use the whole browser width/height (window.innerHeight/Width)
          * 
          * @name GOWN.ResizeManager#fullscreen
-         * @type Boolean
+         * @type boolean
          */
-        fullscreen: Boolean = false;
+        fullscreen: boolean;
 
         /**
          * The renderer this interaction manager works for.
@@ -2889,21 +2878,21 @@ declare namespace GOWN {
          * @name GOWN.ResizeManager#resizeTimeout
          * @type Number
          */
-        resizeTimeout: Number = 0;
+        resizeTimeout: number;
 
         /**
          * Should the resize manager wait after every resize event
          * 
          * @name GOWN.ResizeManager#useResizeDoneTimeout
-         * @type Boolean
+         * @type boolean
          * @default true
          */
-        useResizeDoneTimeout: Boolean = true;
+        useResizeDoneTimeout: boolean;
 
         /**
         * Remove events and listener etc.
         */
-        destroy(): void;
+        destroy();
 
         /**
         * Traverse through the scene graph to call given function on all displayObjects
@@ -2913,7 +2902,7 @@ declare namespace GOWN {
         * {PIXI.Container|PIXI.Sprite|PIXI.extras.TilingSprite}
         * @param [func] the function that will be called on each resizable object. The displayObject will be passed to the function {Function}
         */
-        processInteractive(displayObject: PIXI.DisplayObject, func?: Function): void;
+        processInteractive(displayObject: PIXI.DisplayObject, func?: Function);
     }
 
     class KeyboardManager extends EventEmitter {
@@ -2931,16 +2920,16 @@ declare namespace GOWN {
          */
         // TODO (maybe): move this to an own external lib for PIXI-Keyboard interaction
         // TODO: show keyboard in Cocoon.io - see Cocoon.Dialog.showKeyboard
-        constructor(renderer: PIXI.CanvasRenderer | PIXI.WebGLRenderer, options?: { autoPreventDefault?: Boolean = false }): void;
+        constructor(renderer?: PIXI.CanvasRenderer | PIXI.WebGLRenderer, options?: { autoPreventDefault?: boolean });
 
         /**
          * Should default browser actions automatically be prevented.
          * 
          * @name GOWN.KeyboardManager#autoPreventDefault
-         * @type Boolean
+         * @type boolean
          * @default false;
          */
-        autoPreventDefault: Boolean = false;
+        autoPreventDefault: boolean;
 
         /**
          * An event data object to handle all the event tracking/dispatching
@@ -2961,25 +2950,14 @@ declare namespace GOWN {
         /**
          * Remove events and listener etc.
          */
-        destroy(): void;
-
-        /**
-         * Traverse through the scene graph to call the given function on all displayObjects
-         * that can receive keys
-         *
-         * @param displayObject The displayObject that will be resized (recurcsivly crawls its children)
-         * {PIXI.Container|PIXI.Sprite|PIXI.extras.TilingSprite}
-         * @param [func] The function that will be called on each resizable object.
-         * The displayObject will be passed to the function {Function}
-         */
-        processInteractive(displayObject: PIXI.DisplayObject, func?: Function): void;
+        destroy();
     }
 
     /**
      * Utility functions
      */
     namespace utils {
-        function itemDimensions(item): void;
+        function itemDimensions(item);
 
         /**
          * Utility functions to position an element relative to its parent
@@ -2994,7 +2972,7 @@ declare namespace GOWN {
              * @param elem The element {PIXI.Container}
              * @param [parent] The parent {PIXI.Container}
              */
-            function centerVertical(elem: PIXI.Container, parent?: PIXI.Container): void;
+            function centerVertical(elem: PIXI.Container, parent?: PIXI.Container);
 
             /**
              * Center an element on the parent horizontally
@@ -3003,7 +2981,7 @@ declare namespace GOWN {
              * @param elem The element {PIXI.Container}
              * @param [parent] The parent {PIXI.Container}
              */
-            function centerHorizontal(elem: PIXI.Container, parent?: PIXI.Container): void;
+            function centerHorizontal(elem: PIXI.Container, parent?: PIXI.Container);
 
             /**
              * Center an element on the parent
@@ -3012,7 +2990,7 @@ declare namespace GOWN {
              * @param elem The element {PIXI.Container}
              * @param [parent] The parent {PIXI.Container}
              */
-            function center(elem: PIXI.Container, parent?: PIXI.Container): void;
+            function center(elem: PIXI.Container, parent?: PIXI.Container);
 
             /**
              * Put an element to the bottom of its parent
@@ -3021,7 +2999,7 @@ declare namespace GOWN {
              * @param elem The element {PIXI.Container}
              * @param [parent] The parent {PIXI.Container}
              */
-            function bottom(elem: PIXI.Container, parent?: PIXI.Container): void;
+            function bottom(elem: PIXI.Container, parent?: PIXI.Container);
 
             /**
              * Put an element to the right of its parent.
@@ -3050,7 +3028,7 @@ declare namespace GOWN {
              * @param [centerHeight] The alternative height to crop the center piece
              * (only needed if we want to scale the image smaller than the original) {Number}
              */
-            constructor(texture: PIXI.Texture, rect: PIXI.Rectangle, middleWidth?: Number, centerHeight?: Number): void;
+            constructor(texture: PIXI.Texture, rect: PIXI.Rectangle, middleWidth?: number, centerHeight?: number);
 
             /**
              * The base texture of the scale container
@@ -3122,7 +3100,7 @@ declare namespace GOWN {
              * @name GOWN.ScaleContainer#minHeight
              * @type Number
              */
-            minHeight: Number;
+            minHeight: number;
 
             /**
              * Calculated min. width based on tile sizes in pixel without scaling (if middleWidth is not set it is the same as the width of the texture in the atlas)
@@ -3130,7 +3108,7 @@ declare namespace GOWN {
              * @name GOWN.ScaleContainer#minWidth
              * @type Number
              */
-            minWidth: Number;
+            minWidth: number;
 
             /**
              * The rectangle with position and dimensions of the center piece. Will be used to calculate positions of all other pieces.
@@ -3177,7 +3155,7 @@ declare namespace GOWN {
             fromFrame(frameId, rect): GOWN.utils.ScaleContainer;
         }
 
-        function SliderData(): void;
+        function SliderData();
 
         class Tween {
             /**
@@ -3194,7 +3172,7 @@ declare namespace GOWN {
              * @param [type] The tween library {String}
              */
             //TODO: support greensock?
-            constructor(target: Object, duration: Number, easing: String, type: String): void;
+            constructor(target: Object, duration: number, easing: String, type: String);
 
             /**
              * The PIXI tween type
@@ -3203,7 +3181,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly PIXI_TWEEN: String = 'PIXI_TWEEN';
+            static readonly PIXI_TWEEN: String;
 
             /**
              * The CreateJS tween type
@@ -3212,7 +3190,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly CREATEJS_TWEEN: String = 'CREATEJS_TWEEN';
+            static readonly CREATEJS_TWEEN: String;
 
             /**
              * No tween type
@@ -3221,7 +3199,7 @@ declare namespace GOWN {
              * @final
              * @type String
              */
-            static readonly NONE: String = 'NONE';
+            static readonly NONE: String;
 
             // TODO: possible alternative: create own easing data type
             // e.g. (in, out, inout and type)
@@ -3232,7 +3210,7 @@ declare namespace GOWN {
              * @param ease The name of the CreateJS easing function {String}
              * @return {function}
              */
-            static readonly CREATEJS_EASING(ease: String): Function;
+            static CREATEJS_EASING(ease: String): Function;
 
             /**
              * Get the specific PIXI easing function
@@ -3240,7 +3218,7 @@ declare namespace GOWN {
              * @param ease The name of the PIXI easing function {String}
              * @return {function}
              */
-            static readonly PIXI_EASING(ease: String): Function;
+            static PIXI_EASING(ease: String): Function;
 
             /**
              * The tween duration
@@ -3248,7 +3226,7 @@ declare namespace GOWN {
              * @name GOWN.utils.Tween#duration
              * @type Number;
              */
-            duration: Number;
+            duration: number;
 
             /**
             * The easing function name
@@ -3256,7 +3234,7 @@ declare namespace GOWN {
             * @name GOWN.utils.Tween#easing
             * @type String;
             */
-            easing: String = "linnear";
+            easing: String;
 
             /**
              * The tween library
@@ -3280,19 +3258,19 @@ declare namespace GOWN {
              * @param duration The tween duration {Number}
              * @param easing The easing function name {String}
              */
-            createTween(target: Object, duration: Number, easing: String): void;
+            createTween(target: Object, duration: number, easing: String);
 
             /**
              * Start the tween
              *
              * @param data The tween data {Object}
              */
-            to(data: Object): void;
+            to(data: Object);
 
             /**
              * Stop the tween
              */
-            remove(): void;
+            remove();
         }
 
         /**
@@ -3304,14 +3282,14 @@ declare namespace GOWN {
             /**
              * @member GOWN.utils.resizeScaling.defineProperty
              */
-            class defineProperty { width; height };
+            class defineProperty { width; height }
 
             /**
             * This should be called from inside the constructor
             *
             * @function GOWN.utils.resizeScaling.initResizeScaling
             */
-            function initResizeScaling(): void;
+            function initResizeScaling();
 
             /**
              * Update before draw call.
@@ -3319,17 +3297,17 @@ declare namespace GOWN {
              *
              * @function GOWN.utils.resizeScaling.redraw
              */
-            function redraw(): void;
+            function redraw();
 
             /**
              * @function GOWN.utils.resizeScaling.updateDimensions
              */
-            function updateDimensions(): void;
+            function updateDimensions();
 
             /**
              * @function GOWN.utils.resizeScaling.updateTransform
              */
-            function updateTransform(): void;
+            function updateTransform();
         }
 
         /**
@@ -3343,7 +3321,7 @@ declare namespace GOWN {
          * @param precision The number of decimal digits to keep {Number}
          * @return {Number} The rounded number, or the original input if no rounding is needed
          */
-        function roundToPrecision(number: Number, precision: Number): void;
+        function roundToPrecision(number: number, precision: number);
 
         /**
          * Rounds a Number to the nearest multiple of an input. For example, by rounding
@@ -3356,7 +3334,7 @@ declare namespace GOWN {
          * @param nearest The number whose multiple must be found {Number}
          * @return {Number} The rounded number
          */
-        function roundToNearest(number: Number, nearest: Number): void;
+        function roundToNearest(number: number, nearest: number);
 
         /**
          * Rounds a Number <em>down</em> to the nearest multiple of an input. For example, by rounding
@@ -3369,7 +3347,7 @@ declare namespace GOWN {
          * @param nearest The number whose multiple must be found {Number}
          * @return {Number} The rounded number
          */
-        function roundDownToNearest(number: Number, nearest: Number): void;
+        function roundDownToNearest(number: number, nearest: number);
 
         /**
          * Rounds a Number <em>up</em> to the nearest multiple of an input. For example, by rounding
@@ -3382,7 +3360,7 @@ declare namespace GOWN {
          * @param nearest The number whose multiple must be found {Number}
          * @return {Number} The rounded number
          */
-        function roundUpToNearest(number: Number, nearest: Number): void;
+        function roundUpToNearest(number: number, nearest: number);
 
         /**
          * Mixin utility
@@ -3392,7 +3370,7 @@ declare namespace GOWN {
          * @param source Source object{Object}
          * @return {Object}
          */
-        function mixin(destination: Object, source: Object): void;
+        function mixin(destination: Object, source: Object);
     }
 
 
@@ -3407,16 +3385,16 @@ declare namespace GOWN {
          * @memberof GOWN
          * @constructor
          */
-        constructor(): void
+        constructor()
 
         /**
          * Enables/Disables the control.
          * (not implemented yet)
          *
          * @name GOWN.Control#enabled
-         * @type Boolean
+         * @type boolean
          */
-        enabled: Boolean;
+        enabled: boolean;
 
         /**
          * Get the local mouse position from PIXI.InteractionData
@@ -3432,7 +3410,7 @@ declare namespace GOWN {
          *
          * @param theme the new theme {GOWN.Theme}
          */
-        setTheme(theme: GOWN.Theme): void;
+        setTheme(theme: GOWN.Theme);
     }
 
     class Skinable extends GOWN.Control {
@@ -3446,16 +3424,16 @@ declare namespace GOWN {
          * @constructor
          * @param [theme=GOWN.theme] theme for the skinable {GOWN.Theme}
          */
-        constructor(theme: GOWN.Theme): void
+        constructor(theme: GOWN.Theme)
 
         /**
          * Will destroy the skin cache when the skinable gets destroyed
          * 
          * @name GOWN.Skinable#allowDestroyCache
-         * @type Boolean
+         * @type boolean
          * @default true
          */
-        allowDestroyCache: Boolean = true;
+        allowDestroyCache: boolean;
 
         /**
          * The fallback skin if the other skin does not exist (e.g. if a mobile theme
@@ -3484,12 +3462,12 @@ declare namespace GOWN {
          *
          * @param skin {DisplayObject}
          */
-        changeSkin(skin: PIXI.DisplayObject): void;
+        changeSkin(skin: PIXI.DisplayObject);
 
         /**
          * Destroy the Skinable and empty the skin cache
          */
-        destroy(): void;
+        destroy();
 
         /**
          * Get image from skin (will execute a callback with the loaded skin
@@ -3498,12 +3476,12 @@ declare namespace GOWN {
          * @param name name of the state {String}
          * @param callback callback that is executed if the skin is loaded {function}
          */
-        fromSkin(name: String, callback: Function): void;
+        fromSkin(name: String, callback: Function);
 
         /**
          * Initiate all skins first
          */
-        preloadSkins(): void;
+        preloadSkins();
 
         /**
          * Overwrite data from theme for this specific component.
@@ -3511,8 +3489,115 @@ declare namespace GOWN {
          *
          * @param data updated skin data
          */
-        updateTheme(data): void;
+        updateTheme(data);
     }
 
-    export const loader = PIXI.loader;
+    const loader: PIXI.loaders.Loader;
+}
+
+declare class EventEmitter {
+    static prefixed: string | boolean;
+
+    static EventEmitter: {
+        new(): EventEmitter;
+        prefixed: string | boolean;
+    };
+
+    /**
+     * Minimal EventEmitter interface that is molded against the Node.js
+     * EventEmitter interface.
+     *
+     * @constructor
+     * @api public
+     */
+    constructor();
+
+    /**
+     * Return an array listing the events for which the emitter has registered listeners.
+     *
+     * @returns {(string | symbol)[]}
+     */
+    eventNames<K extends keyof WindowEventMap>(): (string | K)[];
+
+    /**
+     * Return the listeners registered for a given event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @returns {Function[]}
+     */
+    listeners<K extends keyof WindowEventMap>(event: string | K): Function[];
+
+    /**
+     * Check if there listeners for a given event.
+     * If `exists` argument is not `true` lists listeners.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @param {boolean} exists Only check if there are listeners.
+     * @returns {boolean}
+     */
+    listeners<K extends keyof WindowEventMap>(event: string | K, exists: boolean): boolean;
+
+    /**
+     * Calls each of the listeners registered for a given event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @param {...*} args Arguments that are passed to registered listeners
+     * @returns {boolean} `true` if the event had listeners, else `false`.
+     */
+    emit<K extends keyof WindowEventMap>(event: string | K, ...args: any[]): boolean;
+
+    /**
+     * Add a listener for a given event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @param {Function} fn The listener function.
+     * @param {*} [context=this] The context to invoke the listener with.
+     * @returns {EventEmitter} `this`.
+     */
+    on<K extends keyof WindowEventMap>(event: string | K, fn: Function, context?: any): this;
+
+    /**
+     * Add a one-time listener for a given event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @param {Function} fn The listener function.
+     * @param {*} [context=this] The context to invoke the listener with.
+     * @returns {EventEmitter} `this`.
+     */
+    once<K extends keyof WindowEventMap>(event: string | K, fn: Function, context?: any): this;
+
+    /**
+     * Remove the listeners of a given event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @param {Function} fn Only remove the listeners that match this function.
+     * @param {*} context Only remove the listeners that have this context.
+     * @param {boolean} once Only remove one-time listeners.
+     * @returns {EventEmitter} `this`.
+     */
+    removeListener<K extends keyof WindowEventMap>(event: string | K, fn?: Function, context?: any, once?: boolean): this;
+
+    /**
+     * Remove all listeners, or those of the specified event.
+     *
+     * @param {(string | symbol)} event The event name.
+     * @returns {EventEmitter} `this`.
+     */
+    removeAllListeners<K extends keyof WindowEventMap>(event?: string | K): this;
+
+    /**
+     * Alias method for `removeListener`
+     */
+    off<K extends keyof WindowEventMap>(event: string | K, fn?: Function, context?: any, once?: boolean): this;
+
+    /**
+     * Alias method for `on`
+     */
+    addListener<K extends keyof WindowEventMap>(event: string | K, fn: Function, context?: any): this;
+
+    /**
+     * This function doesn't apply anymore.
+     * @deprecated
+     */
+    setMaxListeners(): this;
 }
